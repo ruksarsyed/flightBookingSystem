@@ -67,7 +67,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 				).hasAuthority("ADMIN")
 		.antMatchers(
 				"/hello/updateuser",
-				"/hello/deletuser/{id}"
+				"/hello/deleteuser"
 				).hasAuthority("USER")
 //		.antMatchers("/hello/getall").permitAll()
 //		.antMatchers("/hello/register").permitAll()

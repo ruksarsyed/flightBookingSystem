@@ -52,7 +52,6 @@ public class UserController {
 	@GetMapping("/getall")
 	public List<User> getAll() {
 		return userservice.getAll();
-
 	}
 
 	@GetMapping(value = "/getuser/{id}")
@@ -82,7 +81,7 @@ public class UserController {
 		return new AuthenticationResponse(token);
 	}
 
-	@GetMapping("/get-user-by-username/{username}")
+	@GetMapping("/getuserbyusername/{username}")
 	public User getUserByUsername(@PathVariable("username") String username) {
 		return userservice.getUserByUsername(username);
 	}
