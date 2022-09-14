@@ -64,6 +64,7 @@ public class UserController {
 		return "<h1>Welcome to FlightBooking Platform</h1>";
 	}
 
+	//To Generate the token
 	@PostMapping("/authenticate")
 	public AuthenticationResponse authenticate(@RequestBody AuthenticationRequest jwtRequest) throws Exception {
 

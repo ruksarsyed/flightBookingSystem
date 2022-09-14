@@ -30,7 +30,7 @@ public class BookingService {
 
 	private static final String EMAIL_URL="http://EMAIL-MICROSERVICE/email/send-mail";
 	private static final String FARE_URL="http://FARE-MICROSERVICE/fare";
-	//private static final String CHECKIN_URL="http://CHECKIN-MICROSERVICE/checkin/CheckinById/";
+
 	public String addBooking(FlightData flightdata) {
 		Flight flight=restTemplate.getForObject("http://ADMIN-MICROSERVICE/flight/find/"+flightdata.getFlightNumber()+"/"+flightdata.getBookingDate(),Flight.class);
 		if(flight.getRemainingSeats()<=br.count()) {
@@ -46,7 +46,7 @@ public class BookingService {
 		fr.save(flightdata);
 		String emailBody="Your Booking is Confirmed. Reference Number is "+flightdata.getPnr();
 		String emailSubject = "Booking Confirmation";
-		EmailDetails mail = new EmailDetails("keerthikorrapati01@gmail.com",emailBody,emailSubject);
+		EmailDetails mail = new EmailDetails("keerthikorrapati07@gmail.com",emailBody,emailSubject);
 		restTemplate.postForObject(EMAIL_URL, mail, String.class);
 		return "Your Booking is Confirmed. Reference Number is "+flightdata.getPnr();
 		}
@@ -91,9 +91,4 @@ public class BookingService {
 		return fr.findById(pnr);
 	}
 	
-	
-	
-	
-	
-		
 }

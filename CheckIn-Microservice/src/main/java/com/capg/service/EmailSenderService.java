@@ -22,7 +22,7 @@ public class EmailSenderService {
 	public void sendEmail(String toEmail,String body,String subject) {
 		SimpleMailMessage message = new SimpleMailMessage();
 
-		message.setFrom("keerthikorrapati01@gmail.com");
+		message.setFrom("keerthikorrapati07@gmail.com");
 		message.setTo(toEmail);
 		message.setText(body);	
 		message.setSubject(subject);
@@ -42,7 +42,7 @@ public class EmailSenderService {
 	public FlightData sendEmail(FlightData p,String mailId) {
 		SimpleMailMessage message = new SimpleMailMessage();
 		
-		message.setFrom("keerthikorrapati01@gmail.com");
+		message.setFrom("keerthikorrapati07@gmail.com");
 		message.setTo(mailId);
 		message.setSubject("CheckIn Confirmation Mail");
 		message.setText("CheckIn Successful to "+p.getPnr()+" Seat Number is "+p.getP().getSeatNumber()+"CheckinId is " );

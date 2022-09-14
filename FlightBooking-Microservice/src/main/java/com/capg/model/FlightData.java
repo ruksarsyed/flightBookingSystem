@@ -48,14 +48,7 @@ public class FlightData {
 	@MapsId
     private Passenger p;
 	
-	private CheckinRecord checkinId;
 	
-	public CheckinRecord getCheckinId() {
-		return checkinId;
-	}
-	public void setCheckinId(CheckinRecord checkinId) {
-		this.checkinId = checkinId;
-	}
 	public boolean isCheckin() {
 		return checkin;
 	}

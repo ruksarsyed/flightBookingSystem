@@ -1,6 +1,6 @@
 package com.capg;
 
-import java.util.Collections;
+import java.util.Collections; 
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
